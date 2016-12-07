@@ -1,0 +1,2 @@
+#!/bin/sh
+lipo -create Debug-iphoneos/libGVObuSDK.a Debug-iphonesimulator/libGVObuSDK.a -output libGVObuSDK.a

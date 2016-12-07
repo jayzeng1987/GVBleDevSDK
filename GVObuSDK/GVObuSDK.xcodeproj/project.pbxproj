@@ -23,6 +23,7 @@
 		51DE43801DF84E0800B50F8A /* GVObuResult.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 51DE436F1DF84D4100B50F8A /* GVObuResult.h */; };
 		51DE43811DF84E1B00B50F8A /* GVDefine.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 51DE43621DF84D4100B50F8A /* GVDefine.h */; };
 		51DE43831DF84F5900B50F8A /* GVObuResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE43821DF84F5900B50F8A /* GVObuResult.m */; };
+		51DE43881DF85AA400B50F8A /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DE43871DF85AA400B50F8A /* CoreBluetooth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -71,6 +72,7 @@
 		51DE43731DF84D4100B50F8A /* GVWeChatFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVWeChatFrame.h; sourceTree = "<group>"; };
 		51DE43741DF84D4100B50F8A /* GVWeChatFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVWeChatFrame.m; sourceTree = "<group>"; };
 		51DE43821DF84F5900B50F8A /* GVObuResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVObuResult.m; sourceTree = "<group>"; };
+		51DE43871DF85AA400B50F8A /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51DE43881DF85AA400B50F8A /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +92,7 @@
 			children = (
 				51DE430F1DF84B0200B50F8A /* GVObuSDK */,
 				51DE430E1DF84B0200B50F8A /* Products */,
+				51DE43861DF85AA300B50F8A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,6 +138,14 @@
 				51DE43741DF84D4100B50F8A /* GVWeChatFrame.m */,
 			);
 			path = GVObuSDK;
+			sourceTree = "<group>";
+		};
+		51DE43861DF85AA300B50F8A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				51DE43871DF85AA400B50F8A /* CoreBluetooth.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

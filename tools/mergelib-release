@@ -1,0 +1,2 @@
+#!/bin/sh
+lipo -create Release-iphoneos/libGVObuSDK.a Release-iphonesimulator/libGVObuSDK.a -output libGVObuSDK.a
