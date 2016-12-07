@@ -1,0 +1,348 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		51DE43121DF84B0200B50F8A /* GVObuSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE43111DF84B0200B50F8A /* GVObuSDK.m */; };
+		51DE43131DF84B0200B50F8A /* GVObuSDK.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 51DE43101DF84B0200B50F8A /* GVObuSDK.h */; };
+		51DE43751DF84D4100B50F8A /* GVAbstractProtocols.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE435C1DF84D4100B50F8A /* GVAbstractProtocols.m */; };
+		51DE43761DF84D4100B50F8A /* GVBleCentralManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE435E1DF84D4100B50F8A /* GVBleCentralManage.m */; };
+		51DE43771DF84D4100B50F8A /* GVBleDevCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE43611DF84D4100B50F8A /* GVBleDevCtrl.m */; };
+		51DE43781DF84D4100B50F8A /* GVGBBleDevAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE43641DF84D4100B50F8A /* GVGBBleDevAPI.m */; };
+		51DE43791DF84D4100B50F8A /* GVGBFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE43661DF84D4100B50F8A /* GVGBFrame.m */; };
+		51DE437A1DF84D4100B50F8A /* GVGBIndicationStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE43681DF84D4100B50F8A /* GVGBIndicationStrategy.m */; };
+		51DE437B1DF84D4100B50F8A /* GVGBNotificationStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE436A1DF84D4100B50F8A /* GVGBNotificationStrategy.m */; };
+		51DE437C1DF84D4100B50F8A /* GVGBProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE436C1DF84D4100B50F8A /* GVGBProtocol.m */; };
+		51DE437D1DF84D4100B50F8A /* GVGBTransmitStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE436E1DF84D4100B50F8A /* GVGBTransmitStrategy.m */; };
+		51DE437E1DF84D4100B50F8A /* GVProtocolsFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE43721DF84D4100B50F8A /* GVProtocolsFactory.m */; };
+		51DE437F1DF84D4100B50F8A /* GVWeChatFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE43741DF84D4100B50F8A /* GVWeChatFrame.m */; };
+		51DE43801DF84E0800B50F8A /* GVObuResult.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 51DE436F1DF84D4100B50F8A /* GVObuResult.h */; };
+		51DE43811DF84E1B00B50F8A /* GVDefine.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 51DE43621DF84D4100B50F8A /* GVDefine.h */; };
+		51DE43831DF84F5900B50F8A /* GVObuResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE43821DF84F5900B50F8A /* GVObuResult.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		51DE430B1DF84B0200B50F8A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				51DE43811DF84E1B00B50F8A /* GVDefine.h in CopyFiles */,
+				51DE43801DF84E0800B50F8A /* GVObuResult.h in CopyFiles */,
+				51DE43131DF84B0200B50F8A /* GVObuSDK.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		51DE430D1DF84B0200B50F8A /* libGVObuSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGVObuSDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		51DE43101DF84B0200B50F8A /* GVObuSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GVObuSDK.h; sourceTree = "<group>"; };
+		51DE43111DF84B0200B50F8A /* GVObuSDK.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GVObuSDK.m; sourceTree = "<group>"; };
+		51DE435B1DF84D4100B50F8A /* GVAbstractProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVAbstractProtocols.h; sourceTree = "<group>"; };
+		51DE435C1DF84D4100B50F8A /* GVAbstractProtocols.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVAbstractProtocols.m; sourceTree = "<group>"; };
+		51DE435D1DF84D4100B50F8A /* GVBleCentralManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVBleCentralManage.h; sourceTree = "<group>"; };
+		51DE435E1DF84D4100B50F8A /* GVBleCentralManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVBleCentralManage.m; sourceTree = "<group>"; };
+		51DE435F1DF84D4100B50F8A /* GVBleDev.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVBleDev.h; sourceTree = "<group>"; };
+		51DE43601DF84D4100B50F8A /* GVBleDevCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVBleDevCtrl.h; sourceTree = "<group>"; };
+		51DE43611DF84D4100B50F8A /* GVBleDevCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVBleDevCtrl.m; sourceTree = "<group>"; };
+		51DE43621DF84D4100B50F8A /* GVDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVDefine.h; sourceTree = "<group>"; };
+		51DE43631DF84D4100B50F8A /* GVGBBleDevAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVGBBleDevAPI.h; sourceTree = "<group>"; };
+		51DE43641DF84D4100B50F8A /* GVGBBleDevAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVGBBleDevAPI.m; sourceTree = "<group>"; };
+		51DE43651DF84D4100B50F8A /* GVGBFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVGBFrame.h; sourceTree = "<group>"; };
+		51DE43661DF84D4100B50F8A /* GVGBFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVGBFrame.m; sourceTree = "<group>"; };
+		51DE43671DF84D4100B50F8A /* GVGBIndicationStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVGBIndicationStrategy.h; sourceTree = "<group>"; };
+		51DE43681DF84D4100B50F8A /* GVGBIndicationStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVGBIndicationStrategy.m; sourceTree = "<group>"; };
+		51DE43691DF84D4100B50F8A /* GVGBNotificationStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVGBNotificationStrategy.h; sourceTree = "<group>"; };
+		51DE436A1DF84D4100B50F8A /* GVGBNotificationStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVGBNotificationStrategy.m; sourceTree = "<group>"; };
+		51DE436B1DF84D4100B50F8A /* GVGBProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVGBProtocol.h; sourceTree = "<group>"; };
+		51DE436C1DF84D4100B50F8A /* GVGBProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVGBProtocol.m; sourceTree = "<group>"; };
+		51DE436D1DF84D4100B50F8A /* GVGBTransmitStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVGBTransmitStrategy.h; sourceTree = "<group>"; };
+		51DE436E1DF84D4100B50F8A /* GVGBTransmitStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVGBTransmitStrategy.m; sourceTree = "<group>"; };
+		51DE436F1DF84D4100B50F8A /* GVObuResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVObuResult.h; sourceTree = "<group>"; };
+		51DE43701DF84D4100B50F8A /* GVObuSDKDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVObuSDKDelegate.h; sourceTree = "<group>"; };
+		51DE43711DF84D4100B50F8A /* GVProtocolsFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVProtocolsFactory.h; sourceTree = "<group>"; };
+		51DE43721DF84D4100B50F8A /* GVProtocolsFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVProtocolsFactory.m; sourceTree = "<group>"; };
+		51DE43731DF84D4100B50F8A /* GVWeChatFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVWeChatFrame.h; sourceTree = "<group>"; };
+		51DE43741DF84D4100B50F8A /* GVWeChatFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVWeChatFrame.m; sourceTree = "<group>"; };
+		51DE43821DF84F5900B50F8A /* GVObuResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVObuResult.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		51DE430A1DF84B0200B50F8A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		51DE43041DF84B0200B50F8A = {
+			isa = PBXGroup;
+			children = (
+				51DE430F1DF84B0200B50F8A /* GVObuSDK */,
+				51DE430E1DF84B0200B50F8A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		51DE430E1DF84B0200B50F8A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				51DE430D1DF84B0200B50F8A /* libGVObuSDK.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		51DE430F1DF84B0200B50F8A /* GVObuSDK */ = {
+			isa = PBXGroup;
+			children = (
+				51DE435B1DF84D4100B50F8A /* GVAbstractProtocols.h */,
+				51DE435C1DF84D4100B50F8A /* GVAbstractProtocols.m */,
+				51DE435D1DF84D4100B50F8A /* GVBleCentralManage.h */,
+				51DE435E1DF84D4100B50F8A /* GVBleCentralManage.m */,
+				51DE435F1DF84D4100B50F8A /* GVBleDev.h */,
+				51DE43601DF84D4100B50F8A /* GVBleDevCtrl.h */,
+				51DE43611DF84D4100B50F8A /* GVBleDevCtrl.m */,
+				51DE43621DF84D4100B50F8A /* GVDefine.h */,
+				51DE43631DF84D4100B50F8A /* GVGBBleDevAPI.h */,
+				51DE43641DF84D4100B50F8A /* GVGBBleDevAPI.m */,
+				51DE43651DF84D4100B50F8A /* GVGBFrame.h */,
+				51DE43661DF84D4100B50F8A /* GVGBFrame.m */,
+				51DE43671DF84D4100B50F8A /* GVGBIndicationStrategy.h */,
+				51DE43681DF84D4100B50F8A /* GVGBIndicationStrategy.m */,
+				51DE43691DF84D4100B50F8A /* GVGBNotificationStrategy.h */,
+				51DE436A1DF84D4100B50F8A /* GVGBNotificationStrategy.m */,
+				51DE436B1DF84D4100B50F8A /* GVGBProtocol.h */,
+				51DE436C1DF84D4100B50F8A /* GVGBProtocol.m */,
+				51DE436D1DF84D4100B50F8A /* GVGBTransmitStrategy.h */,
+				51DE436E1DF84D4100B50F8A /* GVGBTransmitStrategy.m */,
+				51DE436F1DF84D4100B50F8A /* GVObuResult.h */,
+				51DE43821DF84F5900B50F8A /* GVObuResult.m */,
+				51DE43101DF84B0200B50F8A /* GVObuSDK.h */,
+				51DE43111DF84B0200B50F8A /* GVObuSDK.m */,
+				51DE43701DF84D4100B50F8A /* GVObuSDKDelegate.h */,
+				51DE43711DF84D4100B50F8A /* GVProtocolsFactory.h */,
+				51DE43721DF84D4100B50F8A /* GVProtocolsFactory.m */,
+				51DE43731DF84D4100B50F8A /* GVWeChatFrame.h */,
+				51DE43741DF84D4100B50F8A /* GVWeChatFrame.m */,
+			);
+			path = GVObuSDK;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		51DE430C1DF84B0200B50F8A /* GVObuSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51DE43161DF84B0200B50F8A /* Build configuration list for PBXNativeTarget "GVObuSDK" */;
+			buildPhases = (
+				51DE43091DF84B0200B50F8A /* Sources */,
+				51DE430A1DF84B0200B50F8A /* Frameworks */,
+				51DE430B1DF84B0200B50F8A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GVObuSDK;
+			productName = GVObuSDK;
+			productReference = 51DE430D1DF84B0200B50F8A /* libGVObuSDK.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		51DE43051DF84B0200B50F8A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = GENVICT;
+				TargetAttributes = {
+					51DE430C1DF84B0200B50F8A = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = TFACG9W7NW;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 51DE43081DF84B0200B50F8A /* Build configuration list for PBXProject "GVObuSDK" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 51DE43041DF84B0200B50F8A;
+			productRefGroup = 51DE430E1DF84B0200B50F8A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				51DE430C1DF84B0200B50F8A /* GVObuSDK */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		51DE43091DF84B0200B50F8A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51DE437D1DF84D4100B50F8A /* GVGBTransmitStrategy.m in Sources */,
+				51DE43781DF84D4100B50F8A /* GVGBBleDevAPI.m in Sources */,
+				51DE43751DF84D4100B50F8A /* GVAbstractProtocols.m in Sources */,
+				51DE43771DF84D4100B50F8A /* GVBleDevCtrl.m in Sources */,
+				51DE437C1DF84D4100B50F8A /* GVGBProtocol.m in Sources */,
+				51DE43791DF84D4100B50F8A /* GVGBFrame.m in Sources */,
+				51DE43121DF84B0200B50F8A /* GVObuSDK.m in Sources */,
+				51DE437B1DF84D4100B50F8A /* GVGBNotificationStrategy.m in Sources */,
+				51DE437E1DF84D4100B50F8A /* GVProtocolsFactory.m in Sources */,
+				51DE43831DF84F5900B50F8A /* GVObuResult.m in Sources */,
+				51DE43761DF84D4100B50F8A /* GVBleCentralManage.m in Sources */,
+				51DE437F1DF84D4100B50F8A /* GVWeChatFrame.m in Sources */,
+				51DE437A1DF84D4100B50F8A /* GVGBIndicationStrategy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		51DE43141DF84B0200B50F8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		51DE43151DF84B0200B50F8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		51DE43171DF84B0200B50F8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = TFACG9W7NW;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		51DE43181DF84B0200B50F8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = TFACG9W7NW;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		51DE43081DF84B0200B50F8A /* Build configuration list for PBXProject "GVObuSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51DE43141DF84B0200B50F8A /* Debug */,
+				51DE43151DF84B0200B50F8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		51DE43161DF84B0200B50F8A /* Build configuration list for PBXNativeTarget "GVObuSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51DE43171DF84B0200B50F8A /* Debug */,
+				51DE43181DF84B0200B50F8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 51DE43051DF84B0200B50F8A /* Project object */;
+}
