@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		51DE43121DF84B0200B50F8A /* GVObuSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE43111DF84B0200B50F8A /* GVObuSDK.m */; };
-		51DE43131DF84B0200B50F8A /* GVObuSDK.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 51DE43101DF84B0200B50F8A /* GVObuSDK.h */; };
+		51DE43131DF84B0200B50F8A /* GVObuSDK.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 51DE43101DF84B0200B50F8A /* GVObuSDK.h */; };
 		51DE43751DF84D4100B50F8A /* GVAbstractProtocols.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE435C1DF84D4100B50F8A /* GVAbstractProtocols.m */; };
 		51DE43761DF84D4100B50F8A /* GVBleCentralManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE435E1DF84D4100B50F8A /* GVBleCentralManage.m */; };
 		51DE43771DF84D4100B50F8A /* GVBleDevCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE43611DF84D4100B50F8A /* GVBleDevCtrl.m */; };
@@ -20,23 +20,22 @@
 		51DE437D1DF84D4100B50F8A /* GVGBTransmitStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE436E1DF84D4100B50F8A /* GVGBTransmitStrategy.m */; };
 		51DE437E1DF84D4100B50F8A /* GVProtocolsFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE43721DF84D4100B50F8A /* GVProtocolsFactory.m */; };
 		51DE437F1DF84D4100B50F8A /* GVWeChatFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE43741DF84D4100B50F8A /* GVWeChatFrame.m */; };
-		51DE43801DF84E0800B50F8A /* GVObuResult.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 51DE436F1DF84D4100B50F8A /* GVObuResult.h */; };
-		51DE43811DF84E1B00B50F8A /* GVDefine.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 51DE43621DF84D4100B50F8A /* GVDefine.h */; };
-		51DE43831DF84F5900B50F8A /* GVObuResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE43821DF84F5900B50F8A /* GVObuResult.m */; };
+		51DE43811DF84E1B00B50F8A /* GVDefine.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 51DE43621DF84D4100B50F8A /* GVDefine.h */; };
 		51DE43881DF85AA400B50F8A /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DE43871DF85AA400B50F8A /* CoreBluetooth.framework */; };
+		E5F5BA0A1DF8F4E3009E1AF9 /* GVDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F5BA091DF8F4E3009E1AF9 /* GVDefine.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		51DE430B1DF84B0200B50F8A /* CopyFiles */ = {
+		51DE430B1DF84B0200B50F8A /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				51DE43811DF84E1B00B50F8A /* GVDefine.h in CopyFiles */,
-				51DE43801DF84E0800B50F8A /* GVObuResult.h in CopyFiles */,
-				51DE43131DF84B0200B50F8A /* GVObuSDK.h in CopyFiles */,
+				51DE43811DF84E1B00B50F8A /* GVDefine.h in Copy Files */,
+				51DE43131DF84B0200B50F8A /* GVObuSDK.h in Copy Files */,
 			);
+			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -65,14 +64,13 @@
 		51DE436C1DF84D4100B50F8A /* GVGBProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVGBProtocol.m; sourceTree = "<group>"; };
 		51DE436D1DF84D4100B50F8A /* GVGBTransmitStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVGBTransmitStrategy.h; sourceTree = "<group>"; };
 		51DE436E1DF84D4100B50F8A /* GVGBTransmitStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVGBTransmitStrategy.m; sourceTree = "<group>"; };
-		51DE436F1DF84D4100B50F8A /* GVObuResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVObuResult.h; sourceTree = "<group>"; };
 		51DE43701DF84D4100B50F8A /* GVObuSDKDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVObuSDKDelegate.h; sourceTree = "<group>"; };
 		51DE43711DF84D4100B50F8A /* GVProtocolsFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVProtocolsFactory.h; sourceTree = "<group>"; };
 		51DE43721DF84D4100B50F8A /* GVProtocolsFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVProtocolsFactory.m; sourceTree = "<group>"; };
 		51DE43731DF84D4100B50F8A /* GVWeChatFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVWeChatFrame.h; sourceTree = "<group>"; };
 		51DE43741DF84D4100B50F8A /* GVWeChatFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVWeChatFrame.m; sourceTree = "<group>"; };
-		51DE43821DF84F5900B50F8A /* GVObuResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVObuResult.m; sourceTree = "<group>"; };
 		51DE43871DF85AA400B50F8A /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		E5F5BA091DF8F4E3009E1AF9 /* GVDefine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVDefine.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +113,7 @@
 				51DE43601DF84D4100B50F8A /* GVBleDevCtrl.h */,
 				51DE43611DF84D4100B50F8A /* GVBleDevCtrl.m */,
 				51DE43621DF84D4100B50F8A /* GVDefine.h */,
+				E5F5BA091DF8F4E3009E1AF9 /* GVDefine.m */,
 				51DE43631DF84D4100B50F8A /* GVGBBleDevAPI.h */,
 				51DE43641DF84D4100B50F8A /* GVGBBleDevAPI.m */,
 				51DE43651DF84D4100B50F8A /* GVGBFrame.h */,
@@ -127,8 +126,6 @@
 				51DE436C1DF84D4100B50F8A /* GVGBProtocol.m */,
 				51DE436D1DF84D4100B50F8A /* GVGBTransmitStrategy.h */,
 				51DE436E1DF84D4100B50F8A /* GVGBTransmitStrategy.m */,
-				51DE436F1DF84D4100B50F8A /* GVObuResult.h */,
-				51DE43821DF84F5900B50F8A /* GVObuResult.m */,
 				51DE43101DF84B0200B50F8A /* GVObuSDK.h */,
 				51DE43111DF84B0200B50F8A /* GVObuSDK.m */,
 				51DE43701DF84D4100B50F8A /* GVObuSDKDelegate.h */,
@@ -157,7 +154,7 @@
 			buildPhases = (
 				51DE43091DF84B0200B50F8A /* Sources */,
 				51DE430A1DF84B0200B50F8A /* Frameworks */,
-				51DE430B1DF84B0200B50F8A /* CopyFiles */,
+				51DE430B1DF84B0200B50F8A /* Copy Files */,
 			);
 			buildRules = (
 			);
@@ -211,11 +208,11 @@
 				51DE43751DF84D4100B50F8A /* GVAbstractProtocols.m in Sources */,
 				51DE43771DF84D4100B50F8A /* GVBleDevCtrl.m in Sources */,
 				51DE437C1DF84D4100B50F8A /* GVGBProtocol.m in Sources */,
+				E5F5BA0A1DF8F4E3009E1AF9 /* GVDefine.m in Sources */,
 				51DE43791DF84D4100B50F8A /* GVGBFrame.m in Sources */,
 				51DE43121DF84B0200B50F8A /* GVObuSDK.m in Sources */,
 				51DE437B1DF84D4100B50F8A /* GVGBNotificationStrategy.m in Sources */,
 				51DE437E1DF84D4100B50F8A /* GVProtocolsFactory.m in Sources */,
-				51DE43831DF84F5900B50F8A /* GVObuResult.m in Sources */,
 				51DE43761DF84D4100B50F8A /* GVBleCentralManage.m in Sources */,
 				51DE437F1DF84D4100B50F8A /* GVWeChatFrame.m in Sources */,
 				51DE437A1DF84D4100B50F8A /* GVGBIndicationStrategy.m in Sources */,

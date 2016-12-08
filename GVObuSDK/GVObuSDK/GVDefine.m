@@ -1,15 +1,14 @@
 //
-//  GVObuResult.m
+//  GVDefine.m
 //  GVObuSDK
 //
-//  Created by 曾晓江 on 2016/12/7.
+//  Created by JayZ on 16/12/8.
 //  Copyright © 2016年 GENVICT. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "GVObuResult.h"
+#import "GVDefine.h"
 
 @implementation GVObuResult
-
 
 @end

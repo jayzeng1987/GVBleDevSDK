@@ -7,7 +7,6 @@
 //
 
 #import "GVGBTransmitStrategy.h"
-#import "GVObuResult.h"
 
 @interface GVGBNotificationStrategy : GVGBTransmitStrategy
 

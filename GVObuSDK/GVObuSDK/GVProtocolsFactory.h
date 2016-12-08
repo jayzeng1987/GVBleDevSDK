@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "GVObuResult.h"
+#import "GVDefine.h"
 
 #pragma mark - 简单工厂模式，创建协议
 

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "GVObuResult.h"
+#import "GVDefine.h"
 
 @interface GVGBFrame : NSObject
 
