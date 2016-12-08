@@ -94,9 +94,9 @@
 		51DE43041DF84B0200B50F8A = {
 			isa = PBXGroup;
 			children = (
+				51DE43861DF85AA300B50F8A /* Frameworks */,
 				51DE430F1DF84B0200B50F8A /* GVObuSDK */,
 				51DE430E1DF84B0200B50F8A /* Products */,
-				51DE43861DF85AA300B50F8A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};

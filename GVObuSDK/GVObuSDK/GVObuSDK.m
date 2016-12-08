@@ -139,62 +139,170 @@ static GVObuSDK * s_instance = nil;
 
 //按照金溢默认规则连接设备
 -(void)connectDevice:(int)timeout callback:(GVResultBlock)resultBlock{
-    
+    if(self.gvBleAPI != nil){
+        [self.gvBleAPI connectDevice:timeout callback:resultBlock];
+    }else if(resultBlock != nil){
+        GVObuResult * result = [[GVObuResult alloc]init];
+        result.status = GVRCObjectIsNull;
+        result.data = nil;
+        result.desc = @"对象为空";
+        
+        resultBlock(result);
+    }
 }
 
 //根据设备蓝牙UUID连接
 -(void)connectDeviceWithUUID:(NSString *)serviceUUID timeout:(int)timeout callback:(GVResultBlock)resultBlock{
-    
+    if(self.gvBleAPI != nil){
+        [self.gvBleAPI connectDeviceWithUUID:serviceUUID timeout:timeout callback:resultBlock];
+    }else if(resultBlock != nil){
+        GVObuResult * result = [[GVObuResult alloc]init];
+        result.status = GVRCObjectIsNull;
+        result.data = nil;
+        result.desc = @"对象为空";
+        
+        resultBlock(result);
+    }
 }
 
 //根据设备名称连接
 -(void)connectDeviceWithName:(NSString *)devName timeout:(int)timeout callback:(GVResultBlock)resultBlock{
-    
+    if(self.gvBleAPI != nil){
+        [self.gvBleAPI connectDeviceWithName:devName timeout:timeout callback:resultBlock];
+    }else if(resultBlock != nil){
+        GVObuResult * result = [[GVObuResult alloc]init];
+        result.status = GVRCObjectIsNull;
+        result.data = nil;
+        result.desc = @"对象为空";
+        
+        resultBlock(result);
+    }
 }
 
 //断开设备连接，断电
 -(void)disconnectDevice:(GVResultBlock)resultBlock{
-    
+    if(self.gvBleAPI != nil){
+        [self.gvBleAPI disconnectDevice:resultBlock];
+    }else if(resultBlock != nil){
+        GVObuResult * result = [[GVObuResult alloc]init];
+        result.status = GVRCObjectIsNull;
+        result.data = nil;
+        result.desc = @"对象为空";
+        
+        resultBlock(result);
+    }
 }
 
 //切换蓝牙通讯类型，Indication or Notification
 -(void)switchCommType:(GVBleCommType)type callback:(GVResultBlock)resultBlock{
-    
+    if(self.gvBleAPI != nil){
+        [self.gvBleAPI switchCommType:type callback:resultBlock];
+    }else if(resultBlock != nil){
+        GVObuResult * result = [[GVObuResult alloc]init];
+        result.status = GVRCObjectIsNull;
+        result.data = nil;
+        result.desc = @"对象为空";
+        
+        resultBlock(result);
+    }
 }
 
 //初始化设备接口
--(void)initDevice:(NSData*) data callback:(GVResultBlock)resultBlock{
-    
+-(void)initDevice:(NSData*)data callback:(GVResultBlock)resultBlock{
+    if(self.gvBleAPI != nil){
+        [self.gvBleAPI initDevice:data callback:resultBlock];
+    }else if(resultBlock != nil){
+        GVObuResult * result = [[GVObuResult alloc]init];
+        result.status = GVRCObjectIsNull;
+        result.data = nil;
+        result.desc = @"对象为空";
+        
+        resultBlock(result);
+    }
 }
 
 //设备通道接口
--(void)devChannel:(NSData*) data callback:(GVResultBlock)resultBlock{
-    
+-(void)devChannel:(NSData*)data callback:(GVResultBlock)resultBlock{
+    if(self.gvBleAPI != nil){
+        [self.gvBleAPI devChannel:data callback:resultBlock];
+    }else if(resultBlock != nil){
+        GVObuResult * result = [[GVObuResult alloc]init];
+        result.status = GVRCObjectIsNull;
+        result.data = nil;
+        result.desc = @"对象为空";
+        
+        resultBlock(result);
+    }
 }
 
 //cos通道接口
--(void)cosChannel:(NSData*) data callback:(GVResultBlock)resultBlock{
-    
+-(void)cosChannel:(NSData*)data callback:(GVResultBlock)resultBlock{
+    if(self.gvBleAPI != nil){
+        [self.gvBleAPI cosChannel:data callback:resultBlock];
+    }else if(resultBlock != nil){
+        GVObuResult * result = [[GVObuResult alloc]init];
+        result.status = GVRCObjectIsNull;
+        result.data = nil;
+        result.desc = @"对象为空";
+        
+        resultBlock(result);
+    }
 }
 
 //获取设备记录接口（设备日志）
--(void)getDevRecords:(NSData*) data callback:(GVResultBlock)resultBlock{
-    
+-(void)getDevRecords:(NSData*)data callback:(GVResultBlock)resultBlock{
+    if(self.gvBleAPI != nil){
+        [self.gvBleAPI getDevRecords:data callback:resultBlock];
+    }else if(resultBlock != nil){
+        GVObuResult * result = [[GVObuResult alloc]init];
+        result.status = GVRCObjectIsNull;
+        result.data = nil;
+        result.desc = @"对象为空";
+        
+        resultBlock(result);
+    }
 }
 
 //认证通道接口
--(void)authChannel:(NSData*) data callback:(GVResultBlock)resultBlock{
-    
+-(void)authChannel:(NSData*)data callback:(GVResultBlock)resultBlock{
+    if(self.gvBleAPI != nil){
+        [self.gvBleAPI authChannel:data callback:resultBlock];
+    }else if(resultBlock != nil){
+        GVObuResult * result = [[GVObuResult alloc]init];
+        result.status = GVRCObjectIsNull;
+        result.data = nil;
+        result.desc = @"对象为空";
+        
+        resultBlock(result);
+    }
 }
 
 //透传通道接口
--(void)transChannel:(NSData*) data callback:(GVResultBlock)resultBlock{
-    
+-(void)transChannel:(NSData*)data callback:(GVResultBlock)resultBlock{
+    if(self.gvBleAPI != nil){
+        [self.gvBleAPI transChannel:data callback:resultBlock];
+    }else if(resultBlock != nil){
+        GVObuResult * result = [[GVObuResult alloc]init];
+        result.status = GVRCObjectIsNull;
+        result.data = nil;
+        result.desc = @"对象为空";
+        
+        resultBlock(result);
+    }
 }
 
 //厂商通道接口
--(void)manufacturerChannel:(NSData*) data callback:(GVResultBlock)resultBlock{
-    
+-(void)manufacturerChannel:(NSData*)data callback:(GVResultBlock)resultBlock{
+    if(self.gvBleAPI != nil){
+        [self.gvBleAPI manufacturerChannel:data callback:resultBlock];
+    }else if(resultBlock != nil){
+        GVObuResult * result = [[GVObuResult alloc]init];
+        result.status = GVRCObjectIsNull;
+        result.data = nil;
+        result.desc = @"对象为空";
+        
+        resultBlock(result);
+    }
 }
 
 //获取设备表面号

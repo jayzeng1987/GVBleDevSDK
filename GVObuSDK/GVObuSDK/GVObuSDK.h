@@ -26,13 +26,13 @@
 -(void)connectDeviceWithName:(NSString *)devName timeout:(int)timeout callback:(GVResultBlock)resultBlock; //根据设备名称连接
 -(void)disconnectDevice:(GVResultBlock)resultBlock;  //断开设备连接，断电
 -(void)switchCommType:(GVBleCommType)type callback:(GVResultBlock)resultBlock; //切换蓝牙通讯类型，Indication or Notification
--(void)initDevice:(NSData*) data callback:(GVResultBlock)resultBlock; //初始化设备接口
--(void)devChannel:(NSData*) data callback:(GVResultBlock)resultBlock; //设备通道接口
--(void)cosChannel:(NSData*) data callback:(GVResultBlock)resultBlock; //cos通道接口
--(void)getDevRecords:(NSData*) data callback:(GVResultBlock)resultBlock; //获取设备记录接口（设备日志）
--(void)authChannel:(NSData*) data callback:(GVResultBlock)resultBlock; //认证通道接口
--(void)transChannel:(NSData*) data callback:(GVResultBlock)resultBlock; //透传通道接口
--(void)manufacturerChannel:(NSData*) data callback:(GVResultBlock)resultBlock; //厂商通道接口
+-(void)initDevice:(NSData*)data callback:(GVResultBlock)resultBlock; //初始化设备接口
+-(void)devChannel:(NSData*)data callback:(GVResultBlock)resultBlock; //设备通道接口
+-(void)cosChannel:(NSData*)data callback:(GVResultBlock)resultBlock; //cos通道接口
+-(void)getDevRecords:(NSData*)data callback:(GVResultBlock)resultBlock; //获取设备记录接口（设备日志）
+-(void)authChannel:(NSData*)data callback:(GVResultBlock)resultBlock; //认证通道接口
+-(void)transChannel:(NSData*)data callback:(GVResultBlock)resultBlock; //透传通道接口
+-(void)manufacturerChannel:(NSData*)data callback:(GVResultBlock)resultBlock; //厂商通道接口
 -(void)getDevSN:(GVResultBlock)resultBlock;  //获取设备表面号
 -(void)getDevVersion:(GVResultBlock)resultBlock; //获取设备版本号
 -(void)getDevBattery:(GVResultBlock)resultBlock; //获取设备电池电量

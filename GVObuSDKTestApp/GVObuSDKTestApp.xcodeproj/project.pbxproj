@@ -87,11 +87,11 @@
 		51DE43191DF84B2B00B50F8A = {
 			isa = PBXGroup;
 			children = (
+				51DE43581DF84BFD00B50F8A /* Frameworks */,
 				51DE43241DF84B2B00B50F8A /* GVObuSDKTestApp */,
 				51DE433E1DF84B2B00B50F8A /* GVObuSDKTestAppTests */,
 				51DE43491DF84B2B00B50F8A /* GVObuSDKTestAppUITests */,
 				51DE43231DF84B2B00B50F8A /* Products */,
-				51DE43581DF84BFD00B50F8A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
