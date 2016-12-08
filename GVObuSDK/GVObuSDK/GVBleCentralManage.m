@@ -13,7 +13,11 @@
     GVProtocolType _protocolType;
 }
 
-@property(nonatomic, weak)id<GVObuSDKDelegate> gvObuSDKDelegate;
+@property (nonatomic, weak) id<GVObuSDKDelegate> gvObuSDKDelegate;
+@property (nonatomic, strong) CBCentralManager *manager;
+@property (nonatomic, strong) CBPeripheral *foundPeripheral;
+@property (nonatomic, strong) CBPeripheral *activedPeripheral;
+@property (nonatomic, assign) Boolean blePowerOn; //蓝牙是否开启
 
 @end
 
@@ -23,8 +27,37 @@
 -(void)centralManagerDidUpdateState:(CBCentralManager *)central{
     GVLog(@"centralManagerDidUpdateState");
     
-    if (self.bleStateBlock != nil) {
-        self.bleStateBlock(central.state, nil, (NSObject*)central);
+//    if (self.bleStateBlock != nil) {
+//        self.bleStateBlock(central.state, nil, (NSObject*)central);
+//    }
+    switch (central.state) {
+        case CBManagerStateUnknown:
+            GVLog(@"centralManagerDidUpdateState: CBManagerStateUnknown");
+            break;
+        case CBManagerStateResetting:
+            GVLog(@"centralManagerDidUpdateState: CBManagerStateResetting");
+            break;
+        case CBManagerStateUnsupported:
+            GVLog(@"centralManagerDidUpdateState: CBManagerStateUnsupported");
+            break;
+        case CBManagerStateUnauthorized:
+            GVLog(@"centralManagerDidUpdateState: CBManagerStateUnauthorized");
+            break;
+        case CBManagerStatePoweredOff:
+            GVLog(@"centralManagerDidUpdateState: CBManagerStatePoweredOff");
+            self.blePowerOn = NO;
+            break;
+        case CBManagerStatePoweredOn:
+            GVLog(@"centralManagerDidUpdateState: CBManagerStatePoweredOn");
+            self.blePowerOn = YES;
+            break;
+            
+        default:
+            break;
+    }
+    
+    if(self.gvObuSDKDelegate && [self.gvObuSDKDelegate respondsToSelector:@selector(didUpdateBleState:)]){
+        [self.gvObuSDKDelegate didUpdateBleState:central.state];
     }
 }
 
@@ -75,6 +108,7 @@ static GVBleCentralManage * instance = nil;
         instance = [[[self class] alloc] init];
         //所有的属性必须放在这里初始化
         instance.manager = [[CBCentralManager alloc] initWithDelegate:instance queue:nil];
+        instance.blePowerOn = NO;
         
     });
     
@@ -92,7 +126,12 @@ static GVBleCentralManage * instance = nil;
 
 #pragma mark 设置代理
 -(void)setObuSDKDelegate:(id)object{
+    GVLog(@"GVBleCentralManage: setObuSDKDelegate");
     self.gvObuSDKDelegate = object;
+    
+    if(self.gvObuSDKDelegate && [self.gvObuSDKDelegate respondsToSelector:@selector(test)]){
+        [self.gvObuSDKDelegate test];
+    }
 }
 
 #pragma mark 扫描设备
@@ -125,9 +164,14 @@ static GVBleCentralManage * instance = nil;
     
 }
 
-
-
-
+#pragma mark 检查设备连接状态
+-(Boolean)checkConnection{
+    if(self.activedPeripheral != nil && [self.activedPeripheral state] == CBPeripheralStateConnected){
+        return YES;
+    }
+    
+    return NO;
+}
 
 
 

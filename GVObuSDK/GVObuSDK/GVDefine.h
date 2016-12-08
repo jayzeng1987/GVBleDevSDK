@@ -9,28 +9,15 @@
 #ifndef GVDefine_h
 #define GVDefine_h
 
+#pragma mark - 常用宏定义
+
 #ifdef DEBUG
 #define GVLog(...) NSLog(__VA_ARGS__)
 #else
 #define GVLog(...)
 #endif
 
-#define GEASY_BLUE_SERVICE_UUID_TONGYONG                        @"FF12"
-#define GEASY_BLUE_WRITE_CHARACTERISTIC_UUID_TONGYONG           @"FF01"
-#define GEASY_BLUE_READ_CHARACTERISTIC_UUID_TONGYONG            @"FF02"
-#define GEASY_BLUE_STATUS_CHARACTERISTIC_UUID_TONGYONG          @"FF03"
-
-#define GEASY_BLUE_SERVICE_UUID_GUIZHOU                         @"FF12"
-#define GEASY_BLUE_WRITE_CHARACTERISTIC_UUID_GUIZHOU            @"FF01"
-#define GEASY_BLUE_READ_CHARACTERISTIC_UUID_GUIZHOU             @"FF02"
-#define GEASY_BLUE_STATUS_CHARACTERISTIC_UUID_GUIZHOU           @"FF03"
-
-#define GEASY_BLUE_SERVICE_UUID_WECHAT                          @"FEE7"
-#define GEASY_BLUE_WRITE_CHARACTERISTIC_UUID                    @"FEC7"
-#define GEASY_BLUE_READ_CHARACTERISTIC_UUID                     @"FEC8"
-#define GEASY_BLUE_STATUS_CHARACTERISTIC_UUID                   @"FF09"
-
-
+#pragma mark - 枚举定义
 //蓝牙设备状态
 typedef NS_ENUM(NSUInteger, GVBleState) {
     GVBleStateUnknown = 0,
@@ -83,17 +70,19 @@ typedef NS_ENUM(NSInteger, GVBleScanType) {
 
 //接口返回的操作结果代码
 typedef NS_ENUM(NSInteger, GVResultCode) {
-    GVRCSuccess = 0,        //操作成功
-    GVRCScanFailed,         //搜索失败
-    GVRCScanTimeout,        //搜索超时
-    GVObjectIsNull,         //对象为空
-    GVObjectCreateFailed,   //对象创建失败
-    GVParamsError,          //接口参数错误
+    GVRCSuccess = 0,            //操作成功
+    GVRCBLEDisable,             //蓝牙未打开
+    GVRCDevNotConnected,        //设备未连接
+    GVRCScanFailed,             //搜索失败
+    GVRCScanTimeout,            //搜索超时
+    GVRCObjectIsNull,           //对象为空
+    GVRCCreateObjectFailed,     //对象创建失败
+    GVRCParamsError,            //接口参数错误
     
     
 };
 
-////////////////////////////////////////////////////////////////////////
+#pragma mark - 通用类定义
 @interface GVObuResult : NSObject
 
 @property (nonatomic, assign) GVResultCode status;   //结果代码，0成功

@@ -16,6 +16,7 @@
 		51DE43401DF84B2B00B50F8A /* GVObuSDKTestAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE433F1DF84B2B00B50F8A /* GVObuSDKTestAppTests.m */; };
 		51DE434B1DF84B2B00B50F8A /* GVObuSDKTestAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE434A1DF84B2B00B50F8A /* GVObuSDKTestAppUITests.m */; };
 		51DE435A1DF84BFD00B50F8A /* libGVObuSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DE43591DF84BFD00B50F8A /* libGVObuSDK.a */; };
+		E5F5BA121DF910B7009E1AF9 /* libGVObuSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E5F5BA111DF910B7009E1AF9 /* libGVObuSDK.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		51DE434A1DF84B2B00B50F8A /* GVObuSDKTestAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GVObuSDKTestAppUITests.m; sourceTree = "<group>"; };
 		51DE434C1DF84B2B00B50F8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51DE43591DF84BFD00B50F8A /* libGVObuSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGVObuSDK.a; path = "../Build/Products/Debug-iphonesimulator/libGVObuSDK.a"; sourceTree = "<group>"; };
+		E5F5BA111DF910B7009E1AF9 /* libGVObuSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGVObuSDK.a; path = "../Build/Products/Debug-iphoneos/libGVObuSDK.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5F5BA121DF910B7009E1AF9 /* libGVObuSDK.a in Frameworks */,
 				51DE435A1DF84BFD00B50F8A /* libGVObuSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,6 +150,7 @@
 		51DE43581DF84BFD00B50F8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E5F5BA111DF910B7009E1AF9 /* libGVObuSDK.a */,
 				51DE43591DF84BFD00B50F8A /* libGVObuSDK.a */,
 			);
 			name = Frameworks;
@@ -530,6 +534,7 @@
 				51DE43511DF84B2B00B50F8A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		51DE43521DF84B2B00B50F8A /* Build configuration list for PBXNativeTarget "GVObuSDKTestAppTests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +543,7 @@
 				51DE43541DF84B2B00B50F8A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		51DE43551DF84B2B00B50F8A /* Build configuration list for PBXNativeTarget "GVObuSDKTestAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -546,6 +552,7 @@
 				51DE43571DF84B2B00B50F8A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

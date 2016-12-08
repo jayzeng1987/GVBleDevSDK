@@ -13,8 +13,8 @@
 @interface GVAbstractProtocols : NSObject
 
 -(void)testAPI; //For test, nonuse!!!
--(void)switchBleCommType:(GVBleCommType)type callback:(GVResultBlock)resultBlock;
--(void)transmit:(NSData *)data callback:(GVResultBlock)resultBlock;
+-(void)switchBleCommType:(GVBleCommType)type callback:(GVResultBlock)resultBlock; //切换蓝牙通讯类型，Indication or Notification
+-(void)transmit:(NSData *)data callback:(GVResultBlock)resultBlock; //数据传输
 
 
 @end

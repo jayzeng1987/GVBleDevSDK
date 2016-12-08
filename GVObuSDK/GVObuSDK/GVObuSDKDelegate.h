@@ -12,6 +12,7 @@
 @protocol GVObuSDKDelegate <NSObject>
 
 @optional
+-(void)test;
 -(void)didUpdateBleState:(GVBleState)state; //设备状态更新时触发
 -(void)didDiscoverDev:(GVBleDev *)dev; //发现设备时触发
 -(void)didDisConnectDev; //设备断开时触发

@@ -1,30 +1,31 @@
 //
-//  GVGBBleDevAPI.m
+//  GVBleDevAPI.m
 //  GVObuSDK
 //
 //  Created by JayZ on 16/12/6.
 //  Copyright © 2016年 genvict. All rights reserved.
 //
 
-#import "GVGBBleDevAPI.h"
+#import "GVBleDevAPI.h"
 #import "GVAbstractProtocols.h"
 #import "GVProtocolsFactory.h"
 #import "GVBleDevCtrl.h"
 #import "GVObuSDKDelegate.h"
 
-@interface GVGBBleDevAPI()
+@interface GVBleDevAPI()
 
-@property (nonatomic, strong) GVAbstractProtocols * protocols;
-@property (nonatomic, strong) GVBleDevCtrl * gvBleDevCtrl;
+@property (nonatomic, strong) GVAbstractProtocols * protocols; //抽象协议对象接口，默认初始化为国标协议
+@property (nonatomic, strong) GVBleDevCtrl * gvBleDevCtrl; //设备控制接口
 @property (nonatomic, weak) id<GVObuSDKDelegate> gvObuSDKDelegate;
 
 @end
 
-@implementation GVGBBleDevAPI
+@implementation GVBleDevAPI
 
+//初始化
 -(instancetype)init{
     if(self = [super init]){
-        self.protocols = [[GVProtocolsFactory shareInstance] create:PROTOCOL_GB callback:nil];
+        self.protocols = [[GVProtocolsFactory shareInstance]create:PROTOCOL_GB callback:nil];
         self.gvBleDevCtrl = [[GVBleDevCtrl alloc]init];
     }
     
@@ -41,25 +42,59 @@
 
 //设置协议类型
 -(void)setProtocolType:(GVProtocolType)type callback:(GVResultBlock)resultBlock{
-    self.protocols = [[GVProtocolsFactory shareInstance]create:type callback:resultBlock];
+    
+    if (self.protocols != nil) {
+        self.protocols = [[GVProtocolsFactory shareInstance]create:type callback:resultBlock];
+        
+    }else if(resultBlock != nil){
+        GVObuResult * result = [[GVObuResult alloc] init];
+        
+        result.status = GVRCObjectIsNull;
+        result.data = nil;
+        result.desc = @"对象为空";
+        
+        resultBlock(result);
+    }else{
+        GVLog(@"GVAbstractProtocols对象为空");
+    }
+
 }
 
 //判断蓝牙是否打开
--(Boolean)isEnabledBluetooth{
+-(void)isEnabledBluetooth:(GVResultBlock)resultBlock{
+
     if (self.gvBleDevCtrl != nil) {
-        return [self.gvBleDevCtrl isEnabledBluetooth];
+        [self.gvBleDevCtrl isEnabledBluetooth:resultBlock];
+        
+    }else if(resultBlock != nil){
+        GVObuResult * result = [[GVObuResult alloc] init];
+        
+        result.status = GVRCObjectIsNull;
+        result.data = nil;
+        result.desc = @"对象为空";
+        
+        resultBlock(result);
+    }else{
+        GVLog(@"GVBleDevCtrl对象为空");
     }
-    
-    return NO;
 }
 
 //检查设备连接状态
--(Boolean)checkConnection{
+-(void)checkConnection:(GVResultBlock)resultBlock{
     if (self.gvBleDevCtrl != nil) {
-        return [self.gvBleDevCtrl checkConnection];
+        return [self.gvBleDevCtrl checkConnection:resultBlock];
+        
+    }else if(resultBlock != nil){
+        GVObuResult * result = [[GVObuResult alloc] init];
+        
+        result.status = GVRCObjectIsNull;
+        result.data = nil;
+        result.desc = @"对象为空";
+        
+        resultBlock(result);
+    }else{
+        GVLog(@"GVBleDevCtrl对象为空");
     }
-    
-    return NO;
 }
 
 //绑定设备
@@ -84,7 +119,7 @@
         [self.gvBleDevCtrl startScanDevice:timeout callback:resultBlock];
     }else if(resultBlock != nil){
         GVObuResult * result = [[GVObuResult alloc]init];
-        result.status = GVObjectIsNull;
+        result.status = GVRCObjectIsNull;
         result.data = nil;
         result.desc = @"对象为空";
         
@@ -105,7 +140,7 @@
         [self.gvBleDevCtrl connectDevice:timeout callback:resultBlock];
     }else{
         GVObuResult * result = [[GVObuResult alloc]init];
-        result.status = GVObjectIsNull;
+        result.status = GVRCObjectIsNull;
         result.data = nil;
         result.desc = @"对象为空";
         
@@ -119,7 +154,7 @@
         [self.gvBleDevCtrl connectDeviceWithUUID:serviceUUID timeout:timeout callback:resultBlock];
     }else{
         GVObuResult * result = [[GVObuResult alloc]init];
-        result.status = GVObjectIsNull;
+        result.status = GVRCObjectIsNull;
         result.data = nil;
         result.desc = @"对象为空";
         
@@ -143,7 +178,7 @@
         [self.protocols switchBleCommType:type callback:resultBlock];
     }else{
         GVObuResult * result = [[GVObuResult alloc]init];
-        result.status = GVObjectIsNull;
+        result.status = GVRCObjectIsNull;
         result.data = nil;
         result.desc = @"对象为空";
         

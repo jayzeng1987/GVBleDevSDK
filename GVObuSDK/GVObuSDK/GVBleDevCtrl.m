@@ -12,6 +12,7 @@
 @interface GVBleDevCtrl()
 
 @property (nonatomic, strong) GVBleCentralManage * gvBleCentralManage;
+@property (nonatomic, weak) id<GVObuSDKDelegate> gvObuSDKDelegate;
 
 @end
 
@@ -27,29 +28,75 @@
 
 //设置代理
 -(void)setObuSDKDelegate:(id)object{
+    self.gvObuSDKDelegate = object;
+    
     if (self.gvBleCentralManage != nil) {
         [self.gvBleCentralManage setObuSDKDelegate:object];
     }
 }
 
 //判断蓝牙是否打开
--(Boolean)isEnabledBluetooth{
-    return YES;
+-(void)isEnabledBluetooth:(GVResultBlock)resultBlock{
+    if (resultBlock != nil) {
+        
+        GVObuResult * result = [[GVObuResult alloc]init];
+        
+        if (self.gvBleCentralManage != nil) {
+            if(self.gvBleCentralManage.blePowerOn){
+                result.status = GVRCSuccess;
+                result.data = nil;
+                result.desc = @"蓝牙已打开";
+            }else{
+                result.status = GVRCBLEDisable;
+                result.data = nil;
+                result.desc = @"蓝牙未打开";
+            }
+        }else{
+            
+            result.status = GVRCObjectIsNull;
+            result.data = nil;
+            result.desc = @"对象为空";
+        }
+        
+        resultBlock(result);
+    }
 }
 
 //检查设备连接状态
--(Boolean)checkConnection{
-    return YES;
+-(void)checkConnection:(GVResultBlock)resultBlock{
+    if (resultBlock != nil) {
+        
+        GVObuResult * result = [[GVObuResult alloc]init];
+        
+        if (self.gvBleCentralManage != nil) {
+            if([self.gvBleCentralManage checkConnection]){
+                result.status = GVRCSuccess;
+                result.data = nil;
+                result.desc = @"设备已连接";
+            }else{
+                result.status = GVRCDevNotConnected;
+                result.data = nil;
+                result.desc = @"设备未连接";
+            }
+        }else{
+            
+            result.status = GVRCObjectIsNull;
+            result.data = nil;
+            result.desc = @"对象为空";
+        }
+        
+        resultBlock(result);
+    }
 }
 
 //绑定设备
--(Boolean)bindDev:(NSString *)uuid{
-    return YES;
+-(void)bindDev:(NSString *)uuid callback:(GVResultBlock)resultBlock{
+
 }
 
 //设备解绑
--(Boolean)unbindDev{
-    return YES;
+-(void)unbindDev:(GVResultBlock)resultBlock{
+
 }
 
 //扫描设备，timeout <= 0, 则需调用stopScanDevice接口

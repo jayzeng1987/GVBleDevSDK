@@ -53,7 +53,7 @@
         default:{
             if (resultBlock != nil) {
                 GVObuResult * result = [[GVObuResult alloc]init];
-                result.status = GVParamsError;
+                result.status = GVRCParamsError;
                 result.data = nil;
                 result.desc = @"接口参数错误";
                 
@@ -70,7 +70,7 @@
         [self.transmitStrategy transmit:data callback:resultBlock];
     }else if(resultBlock != nil){
         GVObuResult * result = [[GVObuResult alloc]init];
-        result.status = GVObjectIsNull;
+        result.status = GVRCObjectIsNull;
         result.data = nil;
         result.desc = @"对象为空";
         

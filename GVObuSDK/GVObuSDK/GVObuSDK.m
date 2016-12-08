@@ -8,13 +8,13 @@
 
 #import "GVObuSDK.h"
 #import "GVObuSDKDelegate.h"
-#import "GVGBBleDevAPI.h"
+#import "GVBleDevAPI.h"
 
 static NSString * s_sdkVersion = @"V1.0.0";
 
 @interface GVObuSDK()
 
-@property (nonatomic, strong) GVGBBleDevAPI * gvGBBleAPI;
+@property (nonatomic, strong) GVBleDevAPI * gvBleAPI;
 @property (nonatomic, weak) id<GVObuSDKDelegate> gvObuSDKDelegate;
 
 @end
@@ -28,7 +28,7 @@ static GVObuSDK * s_instance = nil;
     dispatch_once(&onceToken, ^{
         s_instance = [[[self class] alloc] init];
         //所有的属性必须放在这里初始化
-        s_instance.gvGBBleAPI = [[GVGBBleDevAPI alloc]init];
+        s_instance.gvBleAPI = [[GVBleDevAPI alloc]init];
         
     });
     
@@ -53,18 +53,36 @@ static GVObuSDK * s_instance = nil;
 -(void)setObuSDKDelegate:(id)object{
     self.gvObuSDKDelegate = object;
     
-    if (self.gvGBBleAPI != nil) {
-        [self.gvGBBleAPI setObuSDKDelegate:object];
+    if (self.gvBleAPI != nil) {
+        [self.gvBleAPI setObuSDKDelegate:object];
     }
 }
 
 //设置协议类型
 -(void)setProtocolType:(GVProtocolType)type callback:(GVResultBlock)resultBlock{
-    if (self.gvGBBleAPI != nil) {
-        [self.gvGBBleAPI setProtocolType:type callback:resultBlock];
+    if (self.gvBleAPI != nil) {
+        [self.gvBleAPI setProtocolType:type callback:resultBlock];
     }else if(resultBlock != nil) {
         GVObuResult * result = [[GVObuResult alloc]init];
-        result.status = GVObjectIsNull;
+        result.status = GVRCObjectIsNull;
+        result.data = nil;
+        result.desc = @"对象为空";
+        
+        resultBlock(result);
+    }else{
+        GVLog(@"GVBleAPI对象为空");
+    }
+}
+
+//判断蓝牙是否打开
+-(void)isEnabledBluetooth:(GVResultBlock)resultBlock{
+    if (self.gvBleAPI != nil) {
+        [self.gvBleAPI isEnabledBluetooth:resultBlock];
+        
+    }else if(resultBlock != nil){
+        GVObuResult * result = [[GVObuResult alloc] init];
+        
+        result.status = GVRCObjectIsNull;
         result.data = nil;
         result.desc = @"对象为空";
         
@@ -72,43 +90,39 @@ static GVObuSDK * s_instance = nil;
     }
 }
 
-//判断蓝牙是否打开
--(Boolean)isEnabledBluetooth{
-    if (self.gvGBBleAPI != nil) {
-        return [self.gvGBBleAPI isEnabledBluetooth];
-    }
-    
-    return NO;
-}
-
 //检查设备连接状态
--(Boolean)checkConnection{
-    if (self.gvGBBleAPI != nil) {
-        return [self.gvGBBleAPI checkConnection];
+-(void)checkConnection:(GVResultBlock)resultBlock{
+    if (self.gvBleAPI != nil) {
+        [self.gvBleAPI checkConnection:resultBlock];
+        
+    }else if(resultBlock != nil){
+        GVObuResult * result = [[GVObuResult alloc] init];
+        
+        result.status = GVRCObjectIsNull;
+        result.data = nil;
+        result.desc = @"对象为空";
+        
+        resultBlock(result);
     }
-    
-    return NO;
 }
 
 //绑定设备
--(Boolean)bindDev:(NSString *)uuid{
+-(void)bindDev:(NSString *)uuid callback:(GVResultBlock)resultBlock{
     
-    return YES;
 }
 
 //设备解绑
--(Boolean)unbindDev{
+-(void)unbindDev:(GVResultBlock)resultBlock{
     
-    return YES;
 }
 
 //扫描设备
 -(void)startScanDevice:(int)timeout callback:(GVResultBlock)resultBlock{
-    if (self.gvGBBleAPI != nil) {
-        [self.gvGBBleAPI startScanDevice:timeout callback:resultBlock];
+    if (self.gvBleAPI != nil) {
+        [self.gvBleAPI startScanDevice:timeout callback:resultBlock];
     }else if(resultBlock != nil){
         GVObuResult * result = [[GVObuResult alloc]init];
-        result.status = GVObjectIsNull;
+        result.status = GVRCObjectIsNull;
         result.data = nil;
         result.desc = @"对象为空";
         
@@ -118,8 +132,8 @@ static GVObuSDK * s_instance = nil;
 
 //停止扫描设备
 -(void)stopScanDevice{
-    if (self.gvGBBleAPI != nil) {
-        [self.gvGBBleAPI stopScanDevice];
+    if (self.gvBleAPI != nil) {
+        [self.gvBleAPI stopScanDevice];
     }
 }
 

@@ -41,20 +41,30 @@ static GVProtocolsFactory * s_protocolsFactoryInstance = nil;
     
     switch (protocolType) {
             
-        case PROTOCOL_GB: //国标协议
+        case PROTOCOL_GB:{ //国标协议
             concreteProtocol = [[GVGBProtocol alloc] init];
-            break;
+            GVLog(@"Create GB protocol.");
             
+            break;
+        }
         default:
             
             break;
     }
     
-    if (resultBlock != nil && concreteProtocol == nil) {
+    if (resultBlock != nil) {
         GVObuResult * result = [[GVObuResult alloc]init];
-        result.status = GVObjectCreateFailed;
-        result.data = nil;
-        result.desc = @"对象创建失败";
+        
+        if (concreteProtocol != nil) {
+            result.status = GVRCSuccess;
+            result.data = nil;
+            result.desc = @"对象创建成功";
+
+        } else {
+            result.status = GVRCCreateObjectFailed;
+            result.data = nil;
+            result.desc = @"对象创建失败";
+        }
         
         resultBlock(result);
     }

@@ -11,21 +11,37 @@
 #import "GVDefine.h"
 #import "GVObuSDKDelegate.h"
 
+#define GEASY_BLUE_SERVICE_UUID_TONGYONG                        @"FF12"
+#define GEASY_BLUE_WRITE_CHARACTERISTIC_UUID_TONGYONG           @"FF01"
+#define GEASY_BLUE_READ_CHARACTERISTIC_UUID_TONGYONG            @"FF02"
+#define GEASY_BLUE_STATUS_CHARACTERISTIC_UUID_TONGYONG          @"FF03"
 
-typedef void(^BleStateBlock)(int status, NSString *description, NSObject *obj);
+#define GEASY_BLUE_SERVICE_UUID_GUIZHOU                         @"FF12"
+#define GEASY_BLUE_WRITE_CHARACTERISTIC_UUID_GUIZHOU            @"FF01"
+#define GEASY_BLUE_READ_CHARACTERISTIC_UUID_GUIZHOU             @"FF02"
+#define GEASY_BLUE_STATUS_CHARACTERISTIC_UUID_GUIZHOU           @"FF03"
+
+#define GEASY_BLUE_SERVICE_UUID_WECHAT                          @"FEE7"
+#define GEASY_BLUE_WRITE_CHARACTERISTIC_UUID                    @"FEC7"
+#define GEASY_BLUE_READ_CHARACTERISTIC_UUID                     @"FEC8"
+#define GEASY_BLUE_STATUS_CHARACTERISTIC_UUID                   @"FF09"
+
+
+//typedef void(^BleStateBlock)(int status, NSString *description, NSObject *obj);
 typedef void(^ReadDataBlock)(NSData *data);
 
 @interface GVBleCentralManage : NSObject <CBCentralManagerDelegate, CBPeripheralDelegate>
 
-@property(nonatomic, copy)BleStateBlock bleStateBlock;
+//@property(nonatomic, copy)BleStateBlock bleStateBlock;
 @property(nonatomic, copy)ReadDataBlock readDataBlock;
 
-@property(nonatomic, strong)CBCentralManager *manager;
-@property(nonatomic, strong)CBPeripheral *foundPeripheral;
-@property(nonatomic, strong)CBPeripheral *activedPeripheral;
+@property(nonatomic, strong, readonly)CBCentralManager *manager;
+@property(nonatomic, strong, readonly)CBPeripheral *foundPeripheral;
+@property(nonatomic, strong, readonly)CBPeripheral *activedPeripheral;
 @property(nonatomic, strong)NSMutableArray *filterList; //过滤列表
 @property(nonatomic, assign)GVProtocolType protocolType; //协议类型
 @property(nonatomic, assign)GVBleCommType commType; //通讯方式
+@property(nonatomic, assign, readonly)Boolean blePowerOn; //蓝牙是否开启
 
 #pragma mark - GVBleCentralManage对外接口
 
@@ -53,9 +69,8 @@ typedef void(^ReadDataBlock)(NSData *data);
 #pragma mark 写数据
 -(void)writeData:(NSData *)data;
 
-
-
-
+#pragma mark 检查设备连接状态
+-(Boolean)checkConnection;
 
 
 @end
