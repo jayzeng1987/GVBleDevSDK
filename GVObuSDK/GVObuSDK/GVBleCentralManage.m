@@ -17,7 +17,9 @@
 @property (nonatomic, strong) CBCentralManager *manager;
 @property (nonatomic, strong) CBPeripheral *foundPeripheral;
 @property (nonatomic, strong) CBPeripheral *activedPeripheral;
+@property (nonatomic, strong) GVResultBlock resultBlock;
 @property (nonatomic, assign) Boolean blePowerOn; //蓝牙是否开启
+@property (nonatomic, strong) NSTimer * scanTimer; //扫描设备计时器
 
 @end
 
@@ -57,7 +59,7 @@
     }
     
     if(self.gvObuSDKDelegate && [self.gvObuSDKDelegate respondsToSelector:@selector(didUpdateBleState:)]){
-        [self.gvObuSDKDelegate didUpdateBleState:central.state];
+        [self.gvObuSDKDelegate didUpdateBleState:(GVBleState)central.state];
     }
 }
 
@@ -135,7 +137,20 @@ static GVBleCentralManage * instance = nil;
 }
 
 #pragma mark 扫描设备
--(void)startScanPeripheralWithId:(NSString *)identify withName:(NSString *)name scanType:(int)scanType connectType:(int)connectType timeout:(int)timeout{
+-(void)startScanDevice:(NSArray *)serviceUUIDs timeout:(NSTimeInterval)timeout{
+    
+    if (timeout > 0) {
+        self.scanTimer = [NSTimer scheduledTimerWithTimeInterval:(NSTimeInterval)timeout target:self selector:@selector(scanTimeout:) userInfo:nil repeats:NO];
+    }
+    
+    [self.manager scanForPeripheralsWithServices:serviceUUIDs options:@{CBCentralManagerScanOptionAllowDuplicatesKey: @YES}];
+}
+
+-(void)scanTimeout:(NSTimer *)timer{
+    if (self.manager != nil) {
+        [self.scanTimer invalidate];
+        [self.manager stopScan];
+    }
     
 }
 

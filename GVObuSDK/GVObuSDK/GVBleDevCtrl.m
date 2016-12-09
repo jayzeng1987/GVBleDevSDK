@@ -100,7 +100,7 @@
 }
 
 //扫描设备，timeout <= 0, 则需调用stopScanDevice接口
--(void)startScanDevice:(int)timeout callback:(GVResultBlock)resultBlock{
+-(void)startScanDevice:(NSTimeInterval)timeout callback:(GVResultBlock)resultBlock{
     
 }
 
@@ -110,17 +110,17 @@
 }
 
 //按照金溢默认规则连接设备
--(void)connectDevice:(int)timeout callback:(GVResultBlock)resultBlock{
+-(void)connectDevice:(NSTimeInterval)timeout callback:(GVResultBlock)resultBlock{
     
 }
 
 //根据设备蓝牙UUID连接
--(void)connectDeviceWithUUID:(NSString *)serviceUUID timeout:(int)timeout callback:(GVResultBlock)resultBlock{
+-(void)connectDeviceWithUUID:(NSString *)serviceUUID timeout:(NSTimeInterval)timeout callback:(GVResultBlock)resultBlock{
     
 }
 
 //根据设备名称连接
--(void)connectDeviceWithName:(NSString *)devName timeout:(int)timeout callback:(GVResultBlock)resultBlock{
+-(void)connectDeviceWithName:(NSString *)devName timeout:(NSTimeInterval)timeout callback:(GVResultBlock)resultBlock{
     
 }
 

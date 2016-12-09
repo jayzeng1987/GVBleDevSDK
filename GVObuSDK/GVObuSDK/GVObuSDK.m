@@ -117,7 +117,7 @@ static GVObuSDK * s_instance = nil;
 }
 
 //扫描设备
--(void)startScanDevice:(int)timeout callback:(GVResultBlock)resultBlock{
+-(void)startScanDevice:(NSTimeInterval)timeout callback:(GVResultBlock)resultBlock{
     if (self.gvBleAPI != nil) {
         [self.gvBleAPI startScanDevice:timeout callback:resultBlock];
     }else if(resultBlock != nil){
@@ -138,7 +138,7 @@ static GVObuSDK * s_instance = nil;
 }
 
 //按照金溢默认规则连接设备
--(void)connectDevice:(int)timeout callback:(GVResultBlock)resultBlock{
+-(void)connectDevice:(NSTimeInterval)timeout callback:(GVResultBlock)resultBlock{
     if(self.gvBleAPI != nil){
         [self.gvBleAPI connectDevice:timeout callback:resultBlock];
     }else if(resultBlock != nil){
@@ -152,7 +152,7 @@ static GVObuSDK * s_instance = nil;
 }
 
 //根据设备蓝牙UUID连接
--(void)connectDeviceWithUUID:(NSString *)serviceUUID timeout:(int)timeout callback:(GVResultBlock)resultBlock{
+-(void)connectDeviceWithUUID:(NSString *)serviceUUID timeout:(NSTimeInterval)timeout callback:(GVResultBlock)resultBlock{
     if(self.gvBleAPI != nil){
         [self.gvBleAPI connectDeviceWithUUID:serviceUUID timeout:timeout callback:resultBlock];
     }else if(resultBlock != nil){
@@ -166,7 +166,7 @@ static GVObuSDK * s_instance = nil;
 }
 
 //根据设备名称连接
--(void)connectDeviceWithName:(NSString *)devName timeout:(int)timeout callback:(GVResultBlock)resultBlock{
+-(void)connectDeviceWithName:(NSString *)devName timeout:(NSTimeInterval)timeout callback:(GVResultBlock)resultBlock{
     if(self.gvBleAPI != nil){
         [self.gvBleAPI connectDeviceWithName:devName timeout:timeout callback:resultBlock];
     }else if(resultBlock != nil){

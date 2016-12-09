@@ -27,21 +27,22 @@
 #define GEASY_BLUE_STATUS_CHARACTERISTIC_UUID                   @"FF09"
 
 
+
+
 //typedef void(^BleStateBlock)(int status, NSString *description, NSObject *obj);
 typedef void(^ReadDataBlock)(NSData *data);
 
 @interface GVBleCentralManage : NSObject <CBCentralManagerDelegate, CBPeripheralDelegate>
 
 //@property(nonatomic, copy)BleStateBlock bleStateBlock;
-@property(nonatomic, copy)ReadDataBlock readDataBlock;
-
-@property(nonatomic, strong, readonly)CBCentralManager *manager;
-@property(nonatomic, strong, readonly)CBPeripheral *foundPeripheral;
-@property(nonatomic, strong, readonly)CBPeripheral *activedPeripheral;
-@property(nonatomic, strong)NSMutableArray *filterList; //过滤列表
-@property(nonatomic, assign)GVProtocolType protocolType; //协议类型
-@property(nonatomic, assign)GVBleCommType commType; //通讯方式
-@property(nonatomic, assign, readonly)Boolean blePowerOn; //蓝牙是否开启
+@property (nonatomic, strong, readonly) CBCentralManager *manager;
+@property (nonatomic, strong, readonly) CBPeripheral *foundPeripheral;
+@property (nonatomic, strong, readonly) CBPeripheral *activedPeripheral;
+@property (nonatomic, copy) ReadDataBlock readDataBlock;
+@property (nonatomic, strong)NSMutableArray *filterList; //过滤列表
+@property (nonatomic, assign)GVProtocolType protocolType; //协议类型
+@property (nonatomic, assign)GVBleCommType commType; //通讯方式
+@property (nonatomic, assign, readonly)Boolean blePowerOn; //蓝牙是否开启
 
 #pragma mark - GVBleCentralManage对外接口
 
@@ -52,7 +53,7 @@ typedef void(^ReadDataBlock)(NSData *data);
 -(void)setObuSDKDelegate:(id)object;
 
 #pragma mark 扫描设备
--(void)startScanPeripheralWithId:(NSString *)identify withName:(NSString *)name scanType:(int)scanType connectType:(int)connectType timeout:(int)timeout;
+-(void)startScanDevice:(NSArray *)serviceUUIDs timeout:(NSTimeInterval)timeout;
 
 #pragma mark 停止扫描
 -(void)stopScanPeripheral;
